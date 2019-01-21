@@ -1,0 +1,16 @@
+<form [formGroup]="myform" (ngSubmit)="submit()">
+  <div class="form-group">
+    <label for="">Username:</label>
+    <input type="text" formControlName="uname" (keyup)="display()" class="form-control">
+    <p class="text-info" *ngIf="myform.controls.uname.errors && myform.controls.uname.errors.minlength && myform.controls.uname.touched">username should contain minimum 4 characters</p>
+    <p class="text-info" *ngIf="myform.controls.uname.errors && myform.controls.uname.errors.required && myform.controls.uname.touched">Plz enter username</p>
+  </div>
+  <div class="form-group">
+    <label for="">Password</label>
+    <input type="password" formControlName="upwd" class="form-control">
+  </div>
+  <button type="submit" [disabled]="!myform.valid" class="bnt btn-primary">
+    Submit
+  </button>
+</form>
+<hr>

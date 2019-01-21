@@ -1,0 +1,165 @@
+
+<br>
+
+<div class="col-12">
+  <div class="row">
+    
+    <div class="col-md-3 col-sm-12">
+      <div class="form-group">
+        <ngx-dropdown-treeview class="dpdw"  [config]="config" [items]="items" (click)="selected1 = !selected1"   (selectedChange)="getSelectedValues($event)" [disabled]="!dropdownEnabled"
+          [ngxDisabledOnSelector]="'button.dropdown-toggle'" (filterChange)="onFilterChange($event)">
+        </ngx-dropdown-treeview>
+        
+        <div *ngIf="selected1"  class="alert alert-success abc" role="alert">
+          <ng-container *ngFor="let item of items">
+              <ng-container *ngFor="let i of values">
+                  <ng-container *ngIf=" item.length!=0 ">
+                    <ng-container *ngFor="let child1 of item.children">
+                      <li *ngIf="i==child1.value">{{child1.text}}</li>
+                     <ng-container *ngIf="child1.length!=0">
+                        <ng-container *ngFor="let child2 of child1.children">
+                          <li *ngIf="i==child2.value">{{child2.text}}</li>
+                          <ng-container *ngIf="child2.length!=0">
+                              <ng-container *ngFor="let child3 of child2.children">
+                                  <li *ngIf="i==child3.value">{{child3.text}}</li>
+                              </ng-container>
+                          </ng-container>
+                        </ng-container>
+                     </ng-container>
+                    </ng-container>
+                  
+                  </ng-container>
+                  
+              </ng-container>
+          </ng-container>
+          
+         
+        </div>
+      </div>
+    </div>
+   <!--------------------------------------------------------------------------->
+
+   <div class="col-md-3 col-sm-12">
+      <div class="form-group">
+        <ngx-dropdown-treeview class="dpdw"  [config]="config" [items]="items" (click)="selected2 = !selected2"    (selectedChange)="getSelectedValues($event)" [disabled]="!dropdownEnabled"
+          [ngxDisabledOnSelector]="'button.dropdown-toggle'" (filterChange)="onFilterChange($event)">
+        </ngx-dropdown-treeview>
+        
+        <div *ngIf="selected2" class="alert alert-success abc" role="alert">
+          <ng-container *ngFor="let item of items">
+              <ng-container *ngFor="let i of values">
+                  <ng-container *ngIf=" item.length!=0 ">
+                    <ng-container *ngFor="let child1 of item.children">
+                      <li *ngIf="i==child1.value">{{child1.text}}</li>
+                     <ng-container *ngIf="child1.length!=0">
+                        <ng-container *ngFor="let child2 of child1.children">
+                          <li *ngIf="i==child2.value">{{child2.text}}</li>
+                          <ng-container *ngIf="child2.length!=0">
+                              <ng-container *ngFor="let child3 of child2.children">
+                                  <li *ngIf="i==child3.value">{{child3.text}}</li>
+                              </ng-container>
+                          </ng-container>
+                        </ng-container>
+                     </ng-container>
+                    </ng-container>
+                  
+                  </ng-container>
+                  
+              </ng-container>
+          </ng-container>
+          
+         
+        </div>
+      </div>
+    </div>
+    
+
+
+
+   <!-----------------------------------------------------------------------------> 
+  </div>
+</div>
+<!------------------------->
+<div class="panel-group" id="accordion">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title ptitle">
+        <div class="col-sm-12 pc">
+          Summery View
+        <span class="float-right sp">
+            <button class="btn btn-primary">Branch Summery</button>
+            <button class="btn btn-primary ">Region Update</button>
+            <button class="btn btn-primary ">Building Summery</button>
+            <i data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="fa fa-window-minimize" aria-hidden="true"></i>
+            
+        </span>  
+        </div>
+       
+      </div>
+    </div>
+    <div id="collapse1" class="panel-collapse">
+      <div class="panel-body">
+        <div class="mytb">
+          <table class="table table-bordered">
+            <thead>
+              <th>Country Name</th>
+              <th>Region</th>
+              <th>Sub Region</th>
+              <th>Population</th>
+            </thead>
+            <tbody>
+              <tr *ngFor="let res of result">
+                <td>{{res.name}}</td>
+                <td>{{res.region}}</td>
+                <td>{{res.subregion}}</td>
+                <td>{{res.population}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+  </div>
+  <br>
+  <br>
+<!----------------------->
+<div class="panel-group" id="accordion2">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title ptitle">
+        <div class="col-sm-12 pc">
+          Summery View
+        <span class="float-right sp">
+            <button class="btn btn-primary ">Branch Summery</button>
+            <button class="btn btn-primary ">Region Update</button>
+            <button class="btn btn-primary ">Building Summery</button>
+            <i data-toggle="collapse" data-parent="#accordion2" href="#collapse2" class="fa fa-window-minimize" aria-hidden="true"></i>
+            
+        </span>  
+        </div>
+       
+      </div>
+    </div>
+    <div id="collapse2" class="panel-collapse">
+      <div class="panel-body">
+        <div class="mytb">
+          <table class="table table-bordered">
+            <thead>
+              <th>Country Name</th>
+              <th>Region</th>
+              <th>Sub Region</th>
+              <th>Population</th>
+            </thead>
+            <tbody>
+              <tr *ngFor="let res of result">
+                <td>{{res.name}}</td>
+                <td>{{res.region}}</td>
+                <td>{{res.subregion}}</td>
+                <td>{{res.population}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+  </div>
+<br>
+<hr>

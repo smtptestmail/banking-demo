@@ -1,0 +1,53 @@
+/*You can add global styles to this file, and also import other style files */
+
+.mytab .nav-tabs{
+    position:absolute;
+    top:255px;
+    left:-170px;
+    margin-left:5px;
+    margin-top:50px;
+    -webkit-transform: rotate(270deg);
+    border:1px solid gray;
+
+    writing-mode: bt-lr;
+    border-radius: 10px;
+}
+.mytab .tab-pane{
+    margin-top:50px;
+    margin-left:90px;
+    border:2px solid gray;
+    width:90%;
+    padding:10px;
+    height:auto;
+    overflow: scroll;
+    min-height: 500px;
+    max-height: 800px;
+}
+.mytab .tab-content{
+    backgrond-color:lightblue;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link{
+    
+    font-size:16px;
+    text-transform:capitalize;
+    border:1px solid gray;
+    padding:20px;
+} 
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+    color:white;
+    background:#3a5178;
+    border:1px solid gray;
+    
+}
+
+@media only screen and (max-width: 600px) {
+    .mytab .nav-tabs{
+        
+        top:400px;
+       
+    }
+    .mytab .tab-pane{
+        width:80%;
+    }
+  }

@@ -1,0 +1,54 @@
+ul{
+    
+}
+ul li{
+    display: inline-block;
+}
+ul li a{
+    padding:5px;
+    text-decoration: none;
+    background-color:gray;
+    border:1px solid white;
+    color:white;
+}
+ul li a.active{
+    background-color:green;
+    color:white;
+}
+
+.ptitle{
+    color:white !important;
+    background-color:#3398cc;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.mytb{
+    max-height: 400px;
+    overflow: scroll;
+}
+.pc{
+    padding:10px;
+}
+.pc a{
+    color:white;
+}
+.sp .btn{
+    padding: 0px;
+   margin-left:5px;
+}
+.sp i{
+    margin-left:25px;
+}
+.abc{
+    position: absolute;
+    left:240px;
+    border:1px solid green;
+    min-height: 400px;
+    width:200px;
+    z-index: 999;
+}
+.dpdw{
+    width:100px;
+    padding:25px;
+
+}
